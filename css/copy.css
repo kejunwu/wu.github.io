@@ -1,0 +1,268 @@
+body{
+    margin:0;
+    padding:0;
+}
+
+/*第一屏*/
+.section:nth-child(1){
+    overflow: hidden;
+}
+.section:nth-child(1) .logo{
+    text-align: center;
+    margin-top: 100px;
+}
+.section:nth-child(1) .text{
+    margin:20px 0;
+    text-align: center;
+}
+.section:nth-child(1) .info{
+    text-align: center;
+    margin-top: 120px;
+}
+
+/*第一屏动画*/
+.section:nth-child(1) .text img{
+  margin: 0 30px;
+  opacity: 0;
+  transition:all 1s;
+}
+.section.current:nth-child(1) img{
+    margin: 0 8px;
+     opacity: 1;
+}
+
+
+/*第二屏*/
+.section:nth-child(2){
+    overflow: hidden;
+}
+.section:nth-child(2) .shield{
+    float: left;
+     margin-top:100px;
+     margin-left: 100px;
+    width:425px;
+}
+.section:nth-child(2) .info{
+    float: right;
+    margin-top:160px;
+    margin-right: 100px;
+}
+.section:nth-child(2) .shield img{
+    transition: all 1s;
+}
+/*第二屏动画*/
+.section:nth-child(2) .shield img:nth-child(1){
+   transform: rotate(-290deg) translateX(500px);
+}
+.section:nth-child(2) .shield img:nth-child(2){
+    transform: rotate(380deg) translateX(-200px);
+}
+.section:nth-child(2) .shield img:nth-child(3){
+   transform: rotate(-24deg) translateX(-1000px);
+}
+.section:nth-child(2) .shield img:nth-child(4){
+   transform: rotate(240deg) translateX(300px);
+}
+.section:nth-child(2) .shield img:nth-child(5){
+    transform: rotate(270deg) translateX(-20px);
+}
+.section:nth-child(2) .shield img:nth-child(6){
+   transform: rotate(670deg) translateX(370px);
+}
+.section:nth-child(2) .shield img:nth-child(7){
+   transform: rotate(900deg) translateX(100px);
+}
+.section:nth-child(2) .shield img:nth-child(8){
+   transform: rotate(10deg) translateX(400px);
+}
+.section:nth-child(2) .shield img:nth-child(9){
+   transform: rotate(200deg) translateX(-100px);
+}
+.section.current:nth-child(2) .shield img{
+    transform: rotate(0deg) translateX(0px);
+}
+
+
+/*第三屏*/
+.section:nth-child(3){
+    position: relative;
+    overflow: hidden;
+}
+.section:nth-child(3) .info{
+    float: left;
+    margin-top: 150px;
+    margin-left: 80px;
+}
+.section:nth-child(3) .circle{
+    float: right;
+    margin-top: 120px;
+    margin-right: 80px;
+}
+
+/*第三屏动画*/
+.section:nth-child(3) .rocket{
+     position: absolute;
+    bottom: -203px;
+    right: 700px;
+    transition:all 1s;
+}
+.section.current:nth-child(3) .rocket{
+        bottom: 201px;
+       right: 200px;
+}
+
+
+/*第四屏*/
+.section:nth-child(4){}
+.section:nth-child(4) .search{
+    float: left;
+    margin-top: 177px;
+    margin-left: 71px;
+    position: relative;
+}
+.section:nth-child(4) .info{
+    float: right;
+        margin-right: 120px;
+    margin-top: 182px;
+}
+
+.section:nth-child(4) .search .toolbar{
+    transform: translateX(-200%);
+    transition: all 1s;
+}
+.section.current:nth-child(4) .search .toolbar{
+    transform: translateX(0);
+
+}
+.section:nth-child(4) .search .key{
+    position: absolute;
+    top: 22px;
+    left: 18px;
+    width:0px;
+    overflow: hidden;
+    transition:all 1s;
+}
+@keyframes typing{
+    from{
+        width:0px;
+    }
+    to{
+        width:99px;
+    }
+}
+.section.current:nth-child(4) .search .key{
+    animation: typing 2.5s 1s steps(5) forwards;
+}
+
+.section:nth-child(4) .search .result{
+    overflow: hidden;
+}
+.section:nth-child(4) .search .result img{
+    transition:all 1s 3s;
+    transform: translateY(-300%);
+}
+.section.current:nth-child(4) .search .result img{
+    transform: translateY(0%);
+}
+
+
+/*第五屏*/
+.section:nth-child(5){
+    overflow: hidden;
+}
+.section:nth-child(5) .info{
+    text-align: center;
+}
+.section:nth-child(5) .browser{
+    width:1004px;
+    height:451px;
+    margin: 5px auto;
+    position: relative;
+}
+.section:nth-child(5) .browser .toolsbar{
+position: absolute;
+top:0;
+left:0;
+overflow: hidden;
+width:0px;
+transition: all 1s;
+opacity: 0;
+}
+.section:nth-child(5) .browser .cube{
+   position: absolute;
+    top: 32px;
+    left: 76px;
+    border: 1px solid #fff;
+    /*width: 914px;*/
+    width:0px;
+    height: 24px;
+    transition: all 1s;
+    opacity: 0;
+}
+.section.current:nth-child(5) .browser .toolsbar{
+    width:1004px;
+    opacity: 1;
+}
+.section.current:nth-child(5) .browser .cube{
+     width:914px;
+     opacity: 1;
+}
+.section:nth-child(5) .browser .extra{
+position: absolute;
+bottom:0;
+right:0;
+}
+.section:nth-child(5) .browser .extra-line{
+    position: absolute;
+    bottom: 32px;
+    left: 0;
+    width: 1004px;
+    height: 1px;
+    background-color: #fff;
+}
+.section:nth-child(5) .line{
+    position: absolute;
+}
+.section:nth-child(5) .line-top{
+    width:1004px;
+    height:1px;
+    background-color: #fff;
+    transform: translateX(100%);
+    transition:all 1s;
+}
+.section:nth-child(5) .line-bottom{
+    width:1004px;
+    height:1px;
+    background-color: #fff;
+    bottom: 0px;
+    transform: translateX(-100%);
+    transition:all 1s;
+}
+
+.section:nth-child(5) .line-left{
+    width:1px;
+    height:451px;
+    background-color: #fff;
+    transform: translateY(-100%);
+    transition:all 1s;
+}
+.section:nth-child(5) .line-right{
+    width:1px;
+    height:451px;
+    background-color: #fff;
+    right:0;
+    transform: translateY(100%);
+    transition:all 1s;
+}
+.section.current:nth-child(5) .line-top{
+  transform: translateX(0);
+}
+.section.current:nth-child(5) .line-bottom{
+    transform: translateX(0);
+}
+.section.current:nth-child(5) .line-left{
+    transform: translateY(0);
+}
+.section.current:nth-child(5) .line-right{
+    transform: translateY(0);
+}

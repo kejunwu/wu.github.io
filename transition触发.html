@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .box{
+            width:200px;
+            height:200px;
+            background-color: red;
+            transition: all 1s;
+        }
+        .bgc{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <script>
+      document.querySelector('.box').onclick=function(){
+          this.classList.add('bgc');
+      }
+    </script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/copy.css">
+</head>
+
+<body>
+    <div id="main">
+        <!--第一屏-->
+        <div class="section">
+            <div class="logo">
+                <img src="images/logo.png" alt="">
+            </div>
+            <div class="text">
+                <img src="images/text_1.png" alt="">
+                <img src="images/text_2.png" alt="">
+                <img src="images/text_3.png" alt="">
+                <img src="images/text_4.png" alt="">
+                <img src="images/text_5.png" alt="">
+                <img src="images/text_6.png" alt="">
+                <img src="images/text_7.png" alt="">
+                <img src="images/text_8.png" alt="">
+            </div>
+            <div class="info">
+                <img src="images/info_1.png" alt="">
+            </div>
+        </div>
+        <!--第二屏-->
+        <div class="section">
+            <div class="shield">
+                <img src="images/shield_1.png" alt="">
+                <img src="images/shield_2.png" alt="">
+                <img src="images/shield_3.png" alt="">
+                <img src="images/shield_4.png" alt="">
+                <img src="images/shield_5.png" alt="">
+                <img src="images/shield_6.png" alt="">
+                <img src="images/shield_7.png" alt="">
+                <img src="images/shield_8.png" alt="">
+                <img src="images/shield_9.png" alt="">
+            </div>
+            <div class="info">
+                <img src="images/info_2.png" alt="">
+            </div>
+        </div>
+        <!--第三屏-->
+        <div class="section">
+            <div class="info">
+                <img src="images/info_3.png" alt="">
+            </div>
+            <div class="circle">
+                <img src="images/circle.png" alt="">
+            </div>
+            <img class="rocket" src="images/rocket.png" alt="">
+        </div>
+        <!--第四屏-->
+        <div class="section">
+            <div class="search">
+                <div class="toolbar">
+                    <img src="images/search.png" alt="">
+                </div>
+                <div class="key">
+                    <img src="images/key.png" alt="">
+                </div>
+                <div class="result">
+                    <img src="images/result.png" alt="">
+                </div>
+            </div>
+            <div class="info">
+                <img src="images/info_4.png" alt="">
+            </div>
+        </div>
+        <!--第五屏-->
+        <div class="section">
+            <div class="info">
+                <img src="images/info_5.png" alt="">
+            </div>
+            <div class="browser">
+                <!--四条线-->
+                <span class="line line-top"></span>
+                <span class="line line-bottom"></span>
+                <span class="line line-left"></span>
+                <span class="line line-right"></span>
+                <span class="cube"></span>
+                <div class="toolsbar">
+                    <img src="images/toolbar.png" alt="">
+                </div>
+                 <div class="toolsbar">
+                    <img src="images/toolbar.png" alt="">
+                </div>
+                <span class="extra-line"></span>
+                <div class="extra">
+                    <img src="images/extra.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.fullpage.min.js"></script>
+    <script>
+        $(function () {
+            $('#main').fullpage({
+                css3: true,
+                sectionsColor: ['rgb(13, 165, 214)', 'rgb(42, 181, 97)', 'rgb(222, 137, 16)', 'rgb(22, 186, 157)', 'rgb(13, 165, 214)'],
+                afterLoad: function () {
+                    $('.section').removeClass('current');
+                    var _this = $(this);
+                    setTimeout(function () {
+                        _this.addClass("current");
+                    }, 200)
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
